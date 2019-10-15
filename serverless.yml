@@ -1,0 +1,26 @@
+service: sls-boilerplate
+
+provider:
+  name: aws
+  tracing:
+    apiGateway: true
+    lambda: true
+  runtime: nodejs10.x
+
+plugins:
+  - serverless-plugin-monorepo
+  - serverless-plugin-typescript
+  - serverless-offline
+
+functions:
+  graphql:
+    handler: api/lambdas/graphql.handler
+    events:
+      - http:
+          path: graphql
+          method: post
+          cors: true
+      - http:
+          path: graphql
+          method: get
+          cors: true
