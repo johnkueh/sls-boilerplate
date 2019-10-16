@@ -1,15 +1,16 @@
 import "reflect-metadata";
 import { ApolloServer } from "apollo-server-lambda";
 import { buildSchemaSync } from "type-graphql";
-import { createConnection } from "typeorm";
 import { RecipeResolver } from "../data/resolvers/recipe";
+import { createOrmConnection } from "../lib/dbConnection";
 
 export const handler = new ApolloServer({
   introspection: true,
   playground: true,
-  context: async ({ event, context }) => {
+  context: async () => {
+    const connection = await createOrmConnection();
     return {
-      connection: await createConnection()
+      connection
     };
   },
   schema: buildSchemaSync({

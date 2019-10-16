@@ -1,12 +1,8 @@
-import { ID, ObjectType, Field, Resolver, Query, Arg } from "type-graphql";
-import { getConnection } from "typeorm";
+import { InputType, Field, Resolver, Mutation, Query, Arg } from "type-graphql";
 import { Recipe } from "../entities/recipe";
 
-@ObjectType()
-export class RecipeType {
-  @Field(() => ID)
-  id: string;
-
+@InputType()
+class CreateRecipeInput {
   @Field()
   title: string;
 
@@ -16,20 +12,18 @@ export class RecipeType {
 
 @Resolver()
 export class RecipeResolver {
-  @Query(() => RecipeType)
-  async recipe(@Arg("id") id: string) {
-    const recipe = {
-      id: id,
-      title: "Recipe name",
-      description: "Recipe description"
-    };
-    return recipe;
+  @Query(() => Recipe)
+  async recipe(@Arg("id") id: number) {
+    return Recipe.findOne({ id: id });
   }
 
-  @Query(() => [RecipeType])
+  @Query(() => [Recipe])
   async recipes() {
-    return getConnection()
-      .getRepository(Recipe)
-      .find();
+    return Recipe.find();
+  }
+
+  @Mutation(() => Recipe)
+  createRecipe(@Arg("input") input: CreateRecipeInput): Promise<Recipe> {
+    return Recipe.create(input).save();
   }
 }
