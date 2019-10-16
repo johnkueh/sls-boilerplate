@@ -6,16 +6,10 @@ provider:
     apiGateway: true
     lambda: true
   runtime: nodejs10.x
-  environment:
-    TYPEORM_HOST: localhost
-    TYPEORM_DATABASE: sls-boilerplate
-    TYPEORM_PORT: 5432
-    TYPEORM_SYNCHRONIZE: true
-    TYPEORM_LOGGING: true
-    TYPEORM_ENTITIES: api/data/entities/*.js
 
 plugins:
   - serverless-plugin-monorepo
+  - serverless-dotenv-plugin
   - serverless-plugin-typescript
   - serverless-offline
 
