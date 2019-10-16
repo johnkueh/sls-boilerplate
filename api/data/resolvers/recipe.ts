@@ -1,7 +1,9 @@
 import { ID, ObjectType, Field, Resolver, Query, Arg } from "type-graphql";
+import { getConnection } from "typeorm";
+import { Recipe } from "../entities/recipe";
 
 @ObjectType()
-export class Recipe {
+export class RecipeType {
   @Field(() => ID)
   id: string;
 
@@ -14,7 +16,7 @@ export class Recipe {
 
 @Resolver()
 export class RecipeResolver {
-  @Query(() => Recipe)
+  @Query(() => RecipeType)
   async recipe(@Arg("id") id: string) {
     const recipe = {
       id: id,
@@ -22,5 +24,12 @@ export class RecipeResolver {
       description: "Recipe description"
     };
     return recipe;
+  }
+
+  @Query(() => [RecipeType])
+  async recipes() {
+    return getConnection()
+      .getRepository(Recipe)
+      .find();
   }
 }

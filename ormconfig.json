@@ -1,0 +1,9 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "database": "sls-boilerplate",
+  "entities": ["data/entities/*.js"],
+  "logging": true,
+  "synchronize": true
+}
