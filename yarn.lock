@@ -1174,9 +1174,10 @@ cuid@^2.1.6:
   resolved "https://registry.yarnpkg.com/cuid/-/cuid-2.1.6.tgz#dc3a20b5a7497d36d32c0bf8a2997524c9c796c4"
   integrity sha512-ZFp7PS6cSYMJNch9fc3tyHdE4T8TDo3Y5qAxb0KSA9mpiYDo7z9ql1CznFuuzxea9STVIDy0tJWm2lYiX2ZU1Q==
 
-"data-api-client@github:ArsenyYankovsky/data-api-client#support-date":
+data-api-client@ArsenyYankovsky/data-api-client#support-date:
   version "1.0.0-beta"
-  resolved "https://codeload.github.com/ArsenyYankovsky/data-api-client/tar.gz/ce337b373b2bbea156ad448987aed3b1bd06c7e2"
+  uid ce83c79bbcdac514a2511fa98ed60788122d00fa
+  resolved "https://codeload.github.com/ArsenyYankovsky/data-api-client/tar.gz/ce83c79bbcdac514a2511fa98ed60788122d00fa"
   dependencies:
     sqlstring "^2.3.1"
 
@@ -3147,10 +3148,10 @@ type-fest@^0.3.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.3.1.tgz#63d00d204e059474fe5e1b7c011112bbd1dc29e1"
   integrity sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==
 
-type-graphql@^0.17.5:
-  version "0.17.5"
-  resolved "https://registry.yarnpkg.com/type-graphql/-/type-graphql-0.17.5.tgz#7f2f189ff7b9faef33537291ef333ff9adbee21c"
-  integrity sha512-wscr63K0j9UKcX/nBTySamLd7nMZeYKmADk8A9sVmcPh+clNJUAw96784dg2VZn/sUdmN1y2AeKzmTjCfVB5sA==
+type-graphql@^0.17.6:
+  version "0.17.6"
+  resolved "https://registry.yarnpkg.com/type-graphql/-/type-graphql-0.17.6.tgz#2a939df607f7ca2924986fd0c0b8c753835d7d01"
+  integrity sha512-UFZaMMnpae3zeu9qCdWN82hm8wQeYu/+sQFbG5v3vlTtctZ9Xle9bvNi/rzSbQaG94K9Y5O5AGxjVKKMpEAMYA==
   dependencies:
     "@types/glob" "^7.1.1"
     "@types/node" "^12.6.2"
