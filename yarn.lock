@@ -1174,9 +1174,10 @@ cuid@^2.1.6:
   resolved "https://registry.yarnpkg.com/cuid/-/cuid-2.1.6.tgz#dc3a20b5a7497d36d32c0bf8a2997524c9c796c4"
   integrity sha512-ZFp7PS6cSYMJNch9fc3tyHdE4T8TDo3Y5qAxb0KSA9mpiYDo7z9ql1CznFuuzxea9STVIDy0tJWm2lYiX2ZU1Q==
 
-"data-api-client@github:ArsenyYankovsky/data-api-client#support-date":
+data-api-client@ArsenyYankovsky/data-api-client#support-date:
   version "1.0.0-beta"
-  resolved "https://codeload.github.com/ArsenyYankovsky/data-api-client/tar.gz/ce337b373b2bbea156ad448987aed3b1bd06c7e2"
+  uid ce83c79bbcdac514a2511fa98ed60788122d00fa
+  resolved "https://codeload.github.com/ArsenyYankovsky/data-api-client/tar.gz/ce83c79bbcdac514a2511fa98ed60788122d00fa"
   dependencies:
     sqlstring "^2.3.1"
 
@@ -1804,9 +1805,9 @@ inherits@2, inherits@2.0.4, inherits@^2.0.1:
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
 ini@^1.3.4, ini@~1.3.0:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-  integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
+  integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
 int64-buffer@^0.1.9:
   version "0.1.10"
